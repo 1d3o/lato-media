@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528093615) do
+ActiveRecord::Schema.define(version: 20170528202947) do
 
   create_table "lato_core_superusers", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20170528093615) do
   end
 
   create_table "lato_media_media", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
     t.string "attachment_file_name"
     t.string "attachment_content_type"
     t.integer "attachment_file_size"
