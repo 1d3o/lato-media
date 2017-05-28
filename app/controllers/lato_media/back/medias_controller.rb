@@ -48,7 +48,7 @@ module LatoMedia
         return
       end
 
-      flash[:success] = LANGUAGES[:lato_core][:flashes][:media_destroy_success]
+      flash[:success] = LANGUAGES[:lato_media][:flashes][:media_destroy_success]
       redirect_to lato_media.medias_path
     end
 
