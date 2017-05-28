@@ -1,9 +1,7 @@
-<div class="medias__media md-3">
-  <div class="medias__media-background" style="background-image: url(<%= media.attachment.url %>)">
+<a class="medias__media md-3" href="<%= lato_media.media_path(media.id) %>">
+  <div class="medias__media-background" style="background-image: url(<%= media.attachment.url %>)"></div>
 
-    <div class="medias__media-title">
-      <%= media.attachment_file_name %>
-    </div>
-
+  <div class="medias__media-title">
+    <%= media.attachment_file_name %>
   </div>
-</div>
+</a>

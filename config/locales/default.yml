@@ -5,10 +5,16 @@ menu:
   documentation: Doc. Media
 
 pages:
-  medias: Medias
-  medias_new: New medias
+  medias: Media
+  medias_new: New media
+  medias_edit: Edit media
+
+flashes:
+  media_not_found: Media not found
+  media_destroy_success: The media was destroied successfully
 
 mixed:
   add_media: Add media
   load_media_files: Load media files here
   show_all_media: Show all media
+  delete_media: Delete the media

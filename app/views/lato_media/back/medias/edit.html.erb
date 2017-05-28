@@ -1,0 +1,20 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+%>
+
+<!-- MAIN CONTAINER -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <br>
+    <div class="text-right">
+      <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_media][:mixed][:delete_media], icon: 'trash',
+      url: lato_media.media_path(@media.id), style: 'danger', method: :delete) %>
+    </div>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / MAIN CONTAINER -->
