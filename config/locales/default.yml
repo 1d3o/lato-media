@@ -1,0 +1,14 @@
+menu:
+  medias: Media
+  medias_new: Add new
+  medias_all: Show all
+  documentation: Doc. Media
+
+pages:
+  medias: Medias
+  medias_new: New medias
+
+mixed:
+  add_media: Add media
+  load_media_files: Load media files here
+  show_all_media: Show all media

@@ -1,0 +1,23 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+%>
+
+<!-- MAIN CONTAINER -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
+    label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
+    
+    <br>
+    <div class="text-right">
+      <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_media][:mixed][:show_all_media], icon: 'check',
+      url: lato_media.medias_path, style: 'success') %>
+    </div>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / MAIN CONTAINER -->

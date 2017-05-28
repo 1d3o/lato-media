@@ -1,0 +1,36 @@
+# set max size for media files.
+max_media_accepted_size: 2
+
+# set menu for the module.
+menu:
+  media_medias:
+    icon: picture-o
+    title: translate[medias]
+    url: /lato/media/medias
+    position: 4
+    permission_min: 0
+    permission_max: 99
+    sub_items:
+      new:
+        title: translate[medias_new]
+        url: /lato/media/medias/new
+        permission_min: 0
+        permission_max: 99
+      all:
+        title: translate[medias_all]
+        url: /lato/media/medias
+        permission_min: 0
+        permission_max: 99
+  media_documentation:
+    icon: book
+    title: translate[documentation]
+    url: ''
+    position: 1003
+    permission_min: 4
+    permission_max: 99
+      
+# set assets for the module. -> Please, do not edit default assets.
+assets:
+  media_style:
+    path: lato_media/application
+    type: stylesheet
