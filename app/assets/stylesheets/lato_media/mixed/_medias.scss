@@ -5,8 +5,10 @@
 .medias__media {
   height: 250px;
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
+}
+
+.medias__media--clickable {
   cursor: pointer;
 
   &:hover {
@@ -35,10 +37,9 @@
   text-overflow: ellipsis;
   position: absolute;
   left: 50%;
-  top: 50%;
-  bottom: auto;
+  bottom: 10px;
   right: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   max-width: 70%;
   background: rgba(#fff, 0.65);
   padding: 5px;

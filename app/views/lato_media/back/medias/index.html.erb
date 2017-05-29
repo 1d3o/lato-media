@@ -17,7 +17,7 @@
     <div class="medias__medias-container row">
       <% @medias.each do |media| %>
 
-        <%= render 'lato_media/back/medias/shared/media', media: media, sizes: 'md-3' %>
+        <%= render 'lato_media/back/medias/shared/media', media: media, sizes: 'md-3', clickable: true %>
 
       <% end %>
     </div>
