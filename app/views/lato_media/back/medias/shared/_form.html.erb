@@ -1,0 +1,32 @@
+<%
+  row = cell(:elements, :row).new
+  form = cell(:inputs, :form).new(url: url, method: method)
+%>
+
+<%=raw form.open %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :text).new(name: 'media[title]', label: LANGUAGES[:lato_media][:forms][:title],
+    required: true, class: 'md-12', value: @media.title) %>
+
+  <%=raw row.close %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :textarea).new(name: 'media[description]', label: LANGUAGES[:lato_media][:forms][:description],
+    class: 'md-12', value: @media.description) %>
+
+  <%=raw row.close %>
+
+  <div class="text-right">
+
+    <%=raw cell(:elements, :button).new(type: 'link', label: LANGUAGES[:lato_media][:mixed][:cancel],
+    style: 'danger', icon: 'ban', url: lato_media.medias_path) %>
+
+    <%=raw cell(:elements, :button).new(type: 'submit', label: LANGUAGES[:lato_media][:mixed][:save],
+    style: 'success', icon: 'check') %>
+
+  </div>
+
+<%=raw form.close %>

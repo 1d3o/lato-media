@@ -36,7 +36,19 @@ module LatoMedia
       return unless check_media_presence
     end
 
-    def update; end
+    def update
+      @media = LatoMedia::Media.find_by(params[:id])
+      return unless check_media_presence
+
+      unless @media.update(media_params)
+        flash[:danger] = @media.errors.full_messages.to_sentence
+        redirect_to lato_media.medias_path
+        return
+      end
+
+      flash[:success] = LANGUAGES[:lato_media][:flashes][:media_update_success]
+      redirect_to lato_media.medias_path
+    end
 
     def destroy
       @media = LatoMedia::Media.find_by(params[:id])
@@ -63,6 +75,10 @@ module LatoMedia
       end
 
       true
+    end
+
+    def media_params
+      params.require(:media).permit(:title, :description)
     end
 
   end

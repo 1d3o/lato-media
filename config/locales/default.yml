@@ -12,9 +12,16 @@ pages:
 flashes:
   media_not_found: Media not found
   media_destroy_success: The media was destroied successfully
+  media_update_success: The media was updated successfully
+
+forms:
+  title: Title
+  description: Description
 
 mixed:
   add_media: Add media
   load_media_files: Load media files here
   show_all_media: Show all media
   delete_media: Delete the media
+  cancel: Cancel
+  save: Save
