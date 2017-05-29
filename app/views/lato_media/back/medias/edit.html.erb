@@ -22,7 +22,11 @@
     <%=raw row.close %>
 
     <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_media][:mixed][:delete_media], icon: 'trash',
-    url: lato_media.media_path(@media.id), style: 'danger', method: :delete) %>
+    url: lato_media.media_path(@media.id), style: 'danger', method: :delete, confirmation: {
+      message: LANGUAGES[:lato_media][:mixed][:delete_media_confirm],
+      positive_response: LANGUAGES[:lato_media][:mixed][:delete_media_confirm_positive],
+      negative_response: LANGUAGES[:lato_media][:mixed][:delete_media_confirm_negative]
+    }) %>
 
   <%=raw container_block_small.close %>
   <!-- / SMALL SECTION CONTAINER -->

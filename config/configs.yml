@@ -1,6 +1,11 @@
 # set max size for media files.
 max_media_accepted_size: 2
 
+# set width for media images files.
+thumb_media_width: 100
+medium_media_width: 300
+large_media_width: 600
+
 # set menu for the module.
 menu:
   media_medias:

@@ -17,6 +17,10 @@ flashes:
 forms:
   title: Title
   description: Description
+  url: Url
+  thumb_url: Thumbnail url
+  medium_url: Medium url
+  large_url: Large url
 
 mixed:
   add_media: Add media
@@ -25,3 +29,6 @@ mixed:
   delete_media: Delete the media
   cancel: Cancel
   save: Save
+  delete_media_confirm: Are you sure to delete this media?
+  delete_media_confirm_positive: 'Yes'
+  delete_media_confirm_negative: 'No'

@@ -19,6 +19,26 @@
 
   <%=raw row.close %>
 
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :text).new(name: '', label: LANGUAGES[:lato_media][:forms][:url],
+    disabled: true, class: 'md-12', value: @media.attachment.url) %>
+
+    <% if @media.image? %>
+
+      <%=raw cell(:inputs, :text).new(name: '', label: LANGUAGES[:lato_media][:forms][:thumb_url],
+      disabled: true, class: 'md-4', value: @media.attachment.url(:thumb)) %>
+
+      <%=raw cell(:inputs, :text).new(name: '', label: LANGUAGES[:lato_media][:forms][:medium_url],
+      disabled: true, class: 'md-4', value: @media.attachment.url(:medium)) %>
+
+      <%=raw cell(:inputs, :text).new(name: '', label: LANGUAGES[:lato_media][:forms][:large_url],
+      disabled: true, class: 'md-4', value: @media.attachment.url(:large)) %>
+
+    <% end %>
+
+  <%=raw row.close %>
+
   <div class="text-right">
 
     <%=raw cell(:elements, :button).new(type: 'link', label: LANGUAGES[:lato_media][:mixed][:cancel],

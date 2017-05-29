@@ -32,12 +32,12 @@ module LatoMedia
 
     def edit
       core__set_header_active_page_title(LANGUAGES[:lato_media][:pages][:medias_edit])
-      @media = LatoMedia::Media.find_by(params[:id])
+      @media = LatoMedia::Media.find_by(id: params[:id])
       return unless check_media_presence
     end
 
     def update
-      @media = LatoMedia::Media.find_by(params[:id])
+      @media = LatoMedia::Media.find_by(id: params[:id])
       return unless check_media_presence
 
       unless @media.update(media_params)
@@ -51,7 +51,7 @@ module LatoMedia
     end
 
     def destroy
-      @media = LatoMedia::Media.find_by(params[:id])
+      @media = LatoMedia::Media.find_by(id: params[:id])
       return unless check_media_presence
 
       unless @media.destroy
