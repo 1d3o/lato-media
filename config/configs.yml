@@ -29,7 +29,7 @@ menu:
   media_documentation:
     icon: book
     title: translate[documentation]
-    url: ''
+    url: /lato/media/doc
     position: 1003
     permission_min: 4
     permission_max: 99

@@ -8,6 +8,7 @@ pages:
   medias: Media
   medias_new: New media
   medias_edit: Edit media
+  documentation: Documentation
 
 flashes:
   media_not_found: Media not found
