@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ideonetwork/lato-core
-  revision: c7adf1b43995964db12bd08d942257c163e3522d
+  revision: 84c9d95f10f0ad996fafb5ece19fd5c38449bbc1
   specs:
     lato_core (2.0)
       bcrypt (>= 3.1.7)
@@ -105,7 +105,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    i18n (0.8.1)
+    i18n (0.8.4)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
