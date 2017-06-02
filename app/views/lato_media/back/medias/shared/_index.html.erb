@@ -1,0 +1,7 @@
+<div class="medias__medias-index row">
+  <% @medias.each do |media| %>
+
+    <%= render 'lato_media/back/medias/shared/media', media: media, sizes: 'xs-12 sm-6 md-3', clickable: true %>
+
+  <% end %>
+</div>

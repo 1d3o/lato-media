@@ -10,6 +10,13 @@ module LatoMedia
       @medias = LatoMedia::Media.all.order('created_at DESC')
     end
 
+    def refresh_index
+      @medias = LatoMedia::Media.all.order('created_at DESC')
+      respond_to do |r|
+        r.js
+      end
+    end
+
     def show
       # use edit as default media show page
       redirect_to lato_media.edit_media_path(params[:id])

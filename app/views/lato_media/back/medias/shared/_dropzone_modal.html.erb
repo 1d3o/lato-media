@@ -1,4 +1,12 @@
-<div class="medias__dropzone">
-    <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
-    label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
+<div class="medias__dropzone-modal">
+    <div class="medias__dropzone">
+        <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
+        label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
+    </div>
+
+    <br>
+    <div class="text-right">
+        <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_media][:mixed][:show_all_media], icon: 'check',
+        url: lato_media.medias_refresh_index_path, style: 'success', remote: true) %>
+    </div>
 </div>
