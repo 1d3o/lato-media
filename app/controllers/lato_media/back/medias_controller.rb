@@ -7,11 +7,11 @@ module LatoMedia
 
     def index
       core__set_header_active_page_title(LANGUAGES[:lato_media][:pages][:medias])
-      @medias = LatoMedia::Media.all.order('created_at DESC')
+      set_index_variables((params[:page] ? params[:page].to_i : 1))
     end
 
     def refresh_index
-      @medias = LatoMedia::Media.all.order('created_at DESC')
+      set_index_variables(1)
       respond_to do |r|
         r.js
       end
@@ -86,6 +86,13 @@ module LatoMedia
 
     def media_params
       params.require(:media).permit(:title, :description)
+    end
+
+    def set_index_variables(page)
+      medias = LatoMedia::Media.all.order('created_at DESC')
+      @pagination_current = page
+      @pagination_total = (medias.length.to_f / 24.to_f).ceil
+      @medias = core__paginate_array(medias, 24, page)
     end
 
   end
