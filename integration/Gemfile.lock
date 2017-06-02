@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ideonetwork/lato-core
-  revision: 84c9d95f10f0ad996fafb5ece19fd5c38449bbc1
+  revision: 8113992db2260c5c7370df9094876b04b92df99d
   specs:
     lato_core (2.0)
       bcrypt (>= 3.1.7)
@@ -140,7 +140,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     public_suffix (2.0.5)
-    puma (3.8.2)
+    puma (3.9.0)
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)

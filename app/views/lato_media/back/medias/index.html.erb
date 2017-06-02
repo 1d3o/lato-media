@@ -10,9 +10,12 @@
 
     <div class="text-right">
       <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_media][:mixed][:add_media], icon: 'plus',
-      url: lato_media.new_media_path) %>
+      onclick: "Modal.open('dropzone-modal', event);") %>
     </div>
     <br>
+
+    <%=raw cell(:elements, :modal).new(id: 'dropzone-modal', title: LANGUAGES[:lato_media][:mixed][:add_media],
+    render: render('lato_media/back/medias/shared/dropzone_modal')) %>
 
     <div class="medias__medias-container row">
       <% @medias.each do |media| %>
