@@ -1,21 +1,14 @@
-<% if clickable %>
-
-<a class="medias__media <%= sizes %> medias__media--clickable" href="<%= lato_media.media_path(media.id) %>">
-  <div class="medias__media-background" style="background-image: url(<%= media.attachment.url %>)"></div>
+<a
+  class="medias__media <%= sizes %> medias__media--clickable"
+  <% if clickable %>
+    href="<%= lato_media.media_path(media.id) %>"
+  <% end %>
+>
+  <% if media.image? %>
+    <div class="medias__media-background" style="background-image: url(<%= media.attachment.url(:medium) %>)"></div>
+  <% end %>
 
   <div class="medias__media-title">
     <%= media.title %>
   </div>
 </a>
-
-<% else %>
-
-<div class="medias__media <%= sizes %>">
-  <div class="medias__media-background" style="background-image: url(<%= media.attachment.url %>)"></div>
-
-  <div class="medias__media-title">
-    <%= media.title %>
-  </div>
-</div>
-
-<% end %>

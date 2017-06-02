@@ -8,8 +8,10 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
-    label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
+    <div class="medias__dropzone">
+      <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
+      label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
+    </div>
     
     <br>
     <div class="text-right">
