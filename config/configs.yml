@@ -1,4 +1,4 @@
-# set max size for media files.
+# set max size for media files (Mb).
 max_media_accepted_size: 2
 
 # set width for media images files.
