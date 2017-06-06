@@ -1,0 +1,33 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+  form = cell(:inputs, :form).new(url: '#', method: 'get')
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Mediaselector') %>
+
+    <p>A Mediaselector permit to select one or multiple images and add them to an input.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Mediaselector', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell('LatoMedia', :elements, :mediaselector).new() %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>

@@ -1,7 +1,9 @@
 module LatoMedia
   class Doc::CellsController < Doc::DocController
 
-    def input_media; end
+    def elements_mediaselector; end
+
+    def inputs_media; end
 
   end
 end
