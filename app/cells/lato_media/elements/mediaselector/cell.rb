@@ -4,7 +4,7 @@ module LatoMedia
 
     view_paths << "#{LatoMedia::Engine.root}/app/cells"
 
-    @@requested_args = []
+    @@requested_args = [:id]
 
     @@default_args = {}
 
