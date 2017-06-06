@@ -1,0 +1,10 @@
+<!-- Show selected media / new media request -->
+<div class="cells-inputs-media">
+
+    <%=raw LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_media][:mixed][:add_media], icon: 'plus',
+    onclick: "Modal.open('#{@args[:name]}-dropzone-modal', event);") %>
+
+</div>
+
+<!-- Render real input -->
+<input type="hidden" name="<%= @args[:name] %>" value="<%= @args[:value] %>" />

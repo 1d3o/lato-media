@@ -19,4 +19,23 @@
 <%=raw row.close %>
 <!-- / PRESENTATION -->
 
-<%=raw LatoMedia::Prova::Cell.new %>
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Media input', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
