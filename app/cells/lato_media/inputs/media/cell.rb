@@ -31,8 +31,11 @@ module LatoMedia
     private
 
     def set_conditions
+      # set show options
       @show_label = !@args[:label].nil? && !@args[:label].blank?
       @show_help = !@args[:help].nil? && !@args[:help].blank?
+      # find requested media
+      @media = LatoMedia::Media.find_by(id: @args[:value].to_i)
     end
 
   end

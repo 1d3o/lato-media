@@ -39,3 +39,6 @@ assets:
   media_style:
     path: lato_media/application
     type: stylesheet
+  media_script:
+    path: lato_media/application
+    type: javascript

@@ -34,3 +34,4 @@ mixed:
   delete_media_confirm_positive: 'Yes'
   delete_media_confirm_negative: 'No'
   confirm: Confirm
+  select_media: Select media

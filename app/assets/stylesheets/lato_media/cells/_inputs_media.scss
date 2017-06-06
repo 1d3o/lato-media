@@ -1,3 +1,25 @@
 .cells-inputs-media {
+  margin: 15px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+.cells-inputs-media__label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.cells-inputs-media__help {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  margin-top: 5px;
+  color: lighten(#34495e, 50);
+}
+
+.cells-inputs-media__content {
 
 }

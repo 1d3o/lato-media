@@ -1,3 +1,21 @@
-<div class="cells-inputs-media">
+<!-- Input -->
+<div class="cells-inputs-media <%= @args[:class] %>">
 
+  <% if @show_label %>
+    <label class="cells-inputs-media__label" for=""><%= @args[:label] %></label>
+  <% end %>
+
+  <div class="cells-inputs-media__content">
+    TODO
+  </div>
+
+  <% if @show_help %>
+    <div class="cells-inputs-media__help"><%= @args[:help] %></div>
+  <% end %>
 </div>
+
+<!-- Real hidden input -->
+<input type="hidden" name="<%= @args[:name] %>" value="<%= @args[:value] %>">
+
+<!-- Modal -->
+<%=raw LatoCore::Elements::Modal::Cell.new(id: "#{@args[:name]}-modal", title: LANGUAGES[:lato_media][:mixed][:select_media], render: render('./index.html')) %>

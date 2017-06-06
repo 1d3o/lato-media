@@ -30,7 +30,9 @@
 
       <%=raw row.open %>
 
-        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample') %>
+        <%=raw cell(:inputs, :text).new(name: 'text', label: 'Insert your name', class: 'md-6') %>
+
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', help: 'The media should be nice ;)', class: 'md-6') %>
 
       <%=raw row.close %>
 
