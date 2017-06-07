@@ -1,3 +1,37 @@
 .media-elements-preview {
+  border: solid 2px #ecf0f1;
+}
 
+.media-elements-preview__container {
+  position: relative;
+}
+
+.media-elements-preview__label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  right: auto;
+  transform: translate(-50%, 0);
+  max-width: 70%;
+  background: rgba(#fff, 0.65);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.media-elements-preview__image {
+
+}
+
+.media-elements-preview__image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

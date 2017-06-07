@@ -13,13 +13,15 @@
 
     <p>A Preview is a small preview of a single media element.</p>
 
+    <p>NB: All examples take a sample media from your gallery as media to show.</p>
+
   <%=raw block.close %>
 
 <%=raw row.close %>
 <!-- / PRESENTATION -->
 
 <hr>
-<%=raw cell(:elements, :title).new(label: 'Normal Media input', size: 3) %>
+<%=raw cell(:elements, :title).new(label: 'Normal Preview', size: 3) %>
 
 <%=raw row.open %>
 
@@ -30,3 +32,140 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Preview inside a row', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw row.open %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') %>
+
+    <%=raw row.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Preview with custom height', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, height: 400) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, height: 400) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Preview with custom image size', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <p>NB: This example work only with an image media.</p>
+
+    <%=raw row.open %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'thumb') %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'medium') %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'large') %>
+
+    <%=raw row.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'thumb') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'medium') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-4', size: 'large') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

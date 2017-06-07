@@ -1,9 +1,13 @@
-<div class="media-elements-preview">
+<div class="media-elements-preview <%= @args[:class] %>">
 
   <% if @is_empty %>
-    NON ESISTE
+    <%= render './not_found.html' %>
   <% else %>
-    ESISTE
+    <% if @is_image %>
+      <%= render './image.html' %>
+    <% else %>
+      <%= render './general.html' %>
+    <% end %>
   <% end %>
 
 </div>

@@ -6,7 +6,11 @@ module LatoMedia
 
     @@requested_args = [:media]
 
-    @@default_args = {}
+    @@default_args = {
+      class: '',
+      size: 'medium',
+      height: 200
+    }
 
     def initialize(args = {})
       @args = validate_args(
