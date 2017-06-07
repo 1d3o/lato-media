@@ -23,3 +23,26 @@
 .cells-inputs-media__content {
 
 }
+
+.cells-inputs-media__media-modal {
+
+}
+
+.cells_inputs-media__media-index {
+
+}
+
+.cells_inputs-media__media-single {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: solid 2px #ecf0f1;
+  cursor: pointer;
+}
+
+.cells_inputs-media__media-single--active {
+  border-color: #34495e;
+}

@@ -6,7 +6,7 @@
   <% end %>
 
   <div class="cells-inputs-media__content">
-    TODO
+    <a href="#" onclick="Media.open('<%= @args[:name] %>', event);">Seleziona</a>
   </div>
 
   <% if @show_help %>
@@ -18,4 +18,5 @@
 <input type="hidden" name="<%= @args[:name] %>" value="<%= @args[:value] %>">
 
 <!-- Modal -->
-<%=raw LatoCore::Elements::Modal::Cell.new(id: "#{@args[:name]}-modal", title: LANGUAGES[:lato_media][:mixed][:select_media], render: render('./index.html')) %>
+<%=raw LatoCore::Elements::Modal::Cell.new(id: "#{@args[:name]}-modal",
+       title: LANGUAGES[:lato_media][:mixed][:select_media], render: render('./media_modal.html')) %>

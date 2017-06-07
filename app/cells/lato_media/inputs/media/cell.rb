@@ -36,6 +36,7 @@ module LatoMedia
       @show_help = !@args[:help].nil? && !@args[:help].blank?
       # find requested media
       @media = LatoMedia::Media.find_by(id: @args[:value].to_i)
+      @medias = LatoMedia::Media.all
     end
 
   end

@@ -1,0 +1,14 @@
+<div class="cells-inputs-media__media-modal">
+  <div class="cells_inputs-media__media-index row">
+    <% @medias.each do |media| %>
+      <div
+        class="cells_inputs-media__media-single md-3"
+        <% if media.image? %>
+          style="background-image: url(<%= media.attachment.url(:medium) %>)"
+        <% end %>
+      >
+
+      </div>
+    <% end %>
+  </div>
+</div>
