@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ideonetwork/lato-core
-  revision: 3b2300702a083ed140127407b9226664369dcff9
+  revision: ff6ce46d46eabdd6f131c546c5456603737eb03b
   specs:
     lato_core (2.0)
       bcrypt (>= 3.1.7)

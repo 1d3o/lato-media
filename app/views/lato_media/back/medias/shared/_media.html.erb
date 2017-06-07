@@ -8,7 +8,7 @@
     <div class="medias__media-background" style="background-image: url(<%= media.attachment.url(:medium) %>)"></div>
   <% else %>
     <div class="medias__media-icon">
-      <%=raw cell(:elements, :icon).new(name: 'file-o') %>
+      <i class="fa fa-file-o" aria-hidden="true"></i>
     </div>
   <% end %>
 

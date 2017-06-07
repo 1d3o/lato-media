@@ -1,6 +1,11 @@
 module LatoMedia
   module Media::EntityHelpers
 
+    # This function tells if the attachment exists.
+    def exists?
+      attachment.exists?
+    end
+
     # This function tells if the attachment is an image or another
     # type of file.
     def image?

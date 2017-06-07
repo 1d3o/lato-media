@@ -22,7 +22,15 @@
 
     <%=raw cell(:elements, :title).new(label: 'Cells', size: 2) %>
 
-    <%=raw cell(:elements, :button).new(label: 'Inputs Media', url: lato_media.doc_cells_inputs_media_path) %>
+    <p>Cells are object used to create the user interface.</p>
+
+    <%=raw cell(:elements, :title).new(label: 'Elements', size: 4) %>
+
+    <%=raw cell(:elements, :button).new(label: 'Preview', url: lato_media.doc_cells_elements_preview_path) %>
+
+    <%=raw cell(:elements, :title).new(label: 'Inputs', size: 4) %>
+
+    <%=raw cell(:elements, :button).new(label: 'Media', url: lato_media.doc_cells_inputs_media_path) %>
 
   <%=raw block.close %>
 

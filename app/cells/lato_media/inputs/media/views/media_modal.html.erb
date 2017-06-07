@@ -1,14 +1,33 @@
 <div class="cells-inputs-media__media-modal">
-  <div class="cells_inputs-media__media-index row">
+
+  <div class="cells-inputs-media__media-index row">
     <% @medias.each do |media| %>
       <div
-        class="cells_inputs-media__media-single md-3"
-        <% if media.image? %>
-          style="background-image: url(<%= media.attachment.url(:medium) %>)"
-        <% end %>
+        class="cells-inputs-media__media-single xs-12 sm-6 md-3 lg-3"
+        data-media-id="<%= media.id %>"
+        data-media-title="<%= media.title %>"
+        data-media-image="<%= media.image? ? 'true' : 'false' %>"
+        data-media-image-url="<%= media.image? ? media.attachment.url(:medium) : '' %>"
       >
-
+        <% if media.image? %>
+          <div class="cells-inputs-media__media-single-background" style="background-image: url(<%= media.attachment.url(:medium) %>)"></div>
+        <% else %>
+          <div class="cells-inputs-media__media-single-icon">
+            <i class="fa fa-file-o" aria-hidden="true"></i>
+          </div>
+        <% end %>
       </div>
     <% end %>
+  </div>
+  
+  <div class="cells-inputs-media__media-actions text-right">
+    <%=raw LatoCore::Elements::Button::Cell.new(url: "/lato/media/cells/inputs_media_pagination?page=0&name=#{@args[:name]}", label: LANGUAGES[:lato_media][:mixed][:prev],
+    icon: 'arrow-left', remote: true) %>
+    <%=raw LatoCore::Elements::Button::Cell.new(url: "/lato/media/cells/inputs_media_pagination?page=2&name=#{@args[:name]}", label: LANGUAGES[:lato_media][:mixed][:next],
+    icon: 'arrow-right', icon_align: 'right', remote: true) %>
+    <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:remove],
+    style: 'danger', icon: 'ban') %>
+    <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
+    style: 'success', icon: 'check') %>
   </div>
 </div>
