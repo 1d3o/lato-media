@@ -38,3 +38,4 @@ mixed:
   next: Next
   prev: Prev
   remove: Remove
+  file_not_found: File not found

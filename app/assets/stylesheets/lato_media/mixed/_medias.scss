@@ -2,67 +2,6 @@
 
 }
 
-.medias__media {
-  height: 250px;
-  position: relative;
-  overflow: hidden;
-  border: solid 2px #ecf0f1;
-}
-
-.medias__media--clickable {
-  cursor: pointer;
-
-  &:hover {
-    .medias__media-background {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.medias__media-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ecf0f1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.25s;
-}
-
-.medias__media-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 50px;
-
-  i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-.medias__media-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  right: auto;
-  transform: translate(-50%, 0);
-  max-width: 70%;
-  background: rgba(#fff, 0.65);
-  padding: 5px;
-  border-radius: 5px;
-}
-
 .medias__dropzone {
   form {
     min-height: 300px;

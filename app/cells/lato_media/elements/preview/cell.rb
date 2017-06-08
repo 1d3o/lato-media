@@ -9,7 +9,8 @@ module LatoMedia
     @@default_args = {
       class: '',
       size: 'medium',
-      height: 200
+      height: 200,
+      url: nil
     }
 
     def initialize(args = {})
@@ -28,11 +29,7 @@ module LatoMedia
 
     private
 
-    def set_conditions
-      @is_empty = !@args[:media].exists?
-      # info for existing media
-      @is_image = @args[:media].image?
-    end
+    def set_conditions; end
 
   end
 

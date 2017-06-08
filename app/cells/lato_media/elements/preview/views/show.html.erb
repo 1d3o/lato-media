@@ -1,13 +1,21 @@
-<div class="media-elements-preview <%= @args[:class] %>">
+<% if @args[:url] %>
+  <a href="<%= @args[:url] %>" class="media-elements-preview <%= @args[:class] %>">
+<% else %>
+  <div class="media-elements-preview <%= @args[:class] %>">
+<% end %>
 
-  <% if @is_empty %>
-    <%= render './not_found.html' %>
-  <% else %>
-    <% if @is_image %>
+  <% if @args[:media].exists? %>
+    <% if @args[:media].image? %>
       <%= render './image.html' %>
     <% else %>
       <%= render './general.html' %>
     <% end %>
+  <% else %>
+    <%= render './not_found.html' %>
   <% end %>
 
-</div>
+<% if @args[:url] %>
+  </a>
+<% else %>
+  </div>
+<% end %>

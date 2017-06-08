@@ -15,7 +15,7 @@
 
       <%=raw block.open %>
 
-         <%= render 'lato_media/back/medias/shared/media', media: @media, sizes: 'md-12', clickable: false %>
+         <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, class: 'md-12') %>
 
       <%=raw block.close %>
 
