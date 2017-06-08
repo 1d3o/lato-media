@@ -30,9 +30,9 @@
 
       <%=raw row.open %>
 
-        <%=raw cell(:inputs, :text).new(name: 'text', label: 'Insert your name', class: 'md-6') %>
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6', value: @media.id) %>
 
-        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', help: 'The media should be nice ;)', class: 'md-6') %>
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-2', label: 'Select a media', class: 'md-6') %>
 
       <%=raw row.close %>
 
@@ -41,3 +41,105 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6', value: @media.id) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-2', label: 'Select a media', class: 'md-6') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Media input with custom pagination', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-3', label: 'Select a media', class: 'md-12', per_page: 24) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-3', label: 'Select a media', class: 'md-12', per_page: 24) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Media input with custom size and height', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-4', label: 'Select a media', class: 'md-6', size: 'large', height: 500, value: @media.id) %>
+
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-5', label: 'Select a media', class: 'md-6', size: 'thumb', height: 300, value: @media.id) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-4', label: 'Select a media', class: 'md-6', size: 'large', height: 500, value: @media.id) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample-5', label: 'Select a media', class: 'md-6', size: 'thumb', height: 300, value: @media.id) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

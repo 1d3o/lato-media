@@ -11,7 +11,9 @@ module LatoMedia
       label: '',
       help: '',
       class: 'md-12',
-      per_page: 12
+      per_page: 12,
+      size: 'medium',
+      height: 200
     }
 
     def initialize(args = {})

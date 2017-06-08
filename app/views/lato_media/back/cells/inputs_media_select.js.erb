@@ -1,10 +1,16 @@
-<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);") %>
+<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);",
+                                                    size: @size, height: @height) %>
 
 var cellContainer = $('#<%= @name %>')
 
+<% # update preview %>
 $(cellContainer).find('.cells-inputs-media__content').html('<%=j preview.show.html_safe %>')
 
+<% # update input %>
 $(cellContainer).find('.cells-inputs-media__input').val('<%= @media.id %>')
+
+<% # add active style to pagination %>
+MediaHelpers.inputsMediaUpdateActive('<%= @name %>')
 
 <% unless @media.id %>
 

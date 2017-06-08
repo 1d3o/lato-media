@@ -10,7 +10,8 @@ var modal = $('#<%= @name %>-modal')
   <% @medias.each do |media| %>
 
     <% preview =LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3',
-       url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@name}", remote: true) %>
+       url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@name}&size=#{@size}&height=#{@height}",
+       remote: true) %>
 
     $(modalIndex).append('<%=j preview.show.html_safe %>')
 
@@ -29,3 +30,6 @@ var modal = $('#<%= @name %>-modal')
   $(modalPagination).html('<%=j pagination.show.html_safe %>')
 
 <% end %>
+
+<% # add active style to pagination %>
+MediaHelpers.inputsMediaUpdateActive('<%= @name %>')

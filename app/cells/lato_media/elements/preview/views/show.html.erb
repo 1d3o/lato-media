@@ -3,6 +3,7 @@
     href="<%= @args[:url] %>"
     class="media-elements-preview <%= @args[:class] %>"
     onclick="<%= @args[:onclick] %>"
+    data-media-id="<%= @args[:media].id %>"
     <% if @args[:remote] %>
       data-remote="true"
     <% end %>
@@ -11,6 +12,7 @@
   <div
     class="media-elements-preview <%= @args[:class] %>"
     onclick="<%= @args[:onclick] %>"
+    data-media-id="<%= @args[:media].id %>"
   >
 <% end %>
 
@@ -29,3 +31,7 @@
 <% else %>
   </div>
 <% end %>
+
+<script>
+  MediaHelpers.inputsMediaUpdateActive('<%= @args[:name] %>')
+</script>
