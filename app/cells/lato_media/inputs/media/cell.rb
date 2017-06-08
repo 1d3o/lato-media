@@ -37,7 +37,8 @@ module LatoMedia
       @show_label = !@args[:label].nil? && !@args[:label].blank?
       @show_help = !@args[:help].nil? && !@args[:help].blank?
       # find requested media
-      @media = ((@args[:value] && !@args[:value].blank?) ? LatoMedia::Media.find_by(id: @args[:value]) : LatoMedia::Media.new)
+      @media = LatoMedia::Media.find_by(id: @args[:value])
+      @media  = LatoMedia::Media.new unless @media
       @medias = LatoMedia::Media.all.reverse.first(@args[:per_page])
       @pagination_total = (LatoMedia::Media.all.length / @args[:per_page].to_f).ceil
       # set unique name for the input
