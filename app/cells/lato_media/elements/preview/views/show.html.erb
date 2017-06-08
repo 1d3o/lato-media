@@ -1,7 +1,7 @@
 <% if @args[:url] %>
-  <a href="<%= @args[:url] %>" class="media-elements-preview <%= @args[:class] %>">
+  <a href="<%= @args[:url] %>" class="media-elements-preview <%= @args[:class] %>" onclick="<%= @args[:onclick] %>">
 <% else %>
-  <div class="media-elements-preview <%= @args[:class] %>">
+  <div class="media-elements-preview <%= @args[:class] %>" onclick="<%= @args[:onclick] %>">
 <% end %>
 
   <% if @args[:media].exists? %>

@@ -10,7 +10,8 @@ module LatoMedia
       class: '',
       size: 'medium',
       height: 200,
-      url: nil
+      url: nil,
+      onclick: ''
     }
 
     def initialize(args = {})
@@ -29,7 +30,15 @@ module LatoMedia
 
     private
 
-    def set_conditions; end
+    def set_conditions
+      if @args[:media].image?
+        @icon = ''
+      elsif @args[:media].zip?
+        @icon = 'file-o'
+      else
+        @icon = 'file-o'
+      end
+    end
 
   end
 

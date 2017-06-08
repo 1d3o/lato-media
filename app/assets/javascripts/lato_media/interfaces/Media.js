@@ -12,17 +12,17 @@ var Media = (function () {
   }
 
   function addListenerToSingleMedia (modalId) {
-    var singleMediaIdentifier = '#' + modalId + '-modal .cells-inputs-media__media-single'
-    $(document).on('click', singleMediaIdentifier, function () {
-      // find media informations
-      var mediaId = $(this).attr('data-media-id')
-      var mediaTitle = $(this).attr('data-media-title')
-      var mediaImage = $(this).attr('data-media-image')
-      var mediaImageUrl = $(this).attr('data-media-image-url')
-      // update style
-      $('.cells-inputs-media__media-single').removeClass('cells-inputs-media__media-single--active')
-      $(this).addClass('cells-inputs-media__media-single--active')
-    })
+    // var singleMediaIdentifier = '#' + modalId + '-modal .cells-inputs-media__media-single'
+    // $(document).on('click', singleMediaIdentifier, function () {
+    //   // find media informations
+    //   var mediaId = $(this).attr('data-media-id')
+    //   var mediaTitle = $(this).attr('data-media-title')
+    //   var mediaImage = $(this).attr('data-media-image')
+    //   var mediaImageUrl = $(this).attr('data-media-image-url')
+    //   // update style
+    //   $('.cells-inputs-media__media-single').removeClass('cells-inputs-media__media-single--active')
+    //   $(this).addClass('cells-inputs-media__media-single--active')
+    // })
   }
 
   return {

@@ -6,10 +6,14 @@ module LatoMedia
       attachment.exists?
     end
 
-    # This function tells if the attachment is an image or another
-    # type of file.
+    # This function tells if the attachment is an image.
     def image?
       attachment.content_type =~ /^image/
+    end
+
+    # This function tells if the attachment is a compressed file.
+    def zip?
+      attachment.content_type =~ /^zip/
     end
 
   end

@@ -6,7 +6,9 @@ module LatoMedia
     def inputs_media_pagination
       @name = params[:name]
       @page = ((params[:page] && params[:page].to_i > 0) ? params[:page].to_i : 1)
-      @medias = core__paginate_array(LatoMedia::Media.all.reverse, 8, @page)
+      @per_page = ((params[:per_page] && params[:per_page].to_i > 0) ? params[:per_page].to_i : 12)
+      @medias = core__paginate_array(LatoMedia::Media.all.reverse, @per_page, @page)
+      @pagination_total = (LatoMedia::Media.all.length / @per_page.to_f).ceil
 
       respond_to do |r|
         r.js

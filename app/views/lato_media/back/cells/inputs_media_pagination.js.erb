@@ -9,7 +9,9 @@ var modal = $('#<%= @name %>-modal')
 
   <% @medias.each do |media| %>
 
-    $(modalIndex).append('<div class="cells-inputs-media__media-single xs-12 sm-6 md-3 lg-3" data-media-id="<%= media.id %>" data-media-title="<%= media.title %>" data-media-image="<%= media.image? ? 'true' : 'false' %>" data-media-image-url="<%= media.image? ? media.attachment.url(:medium) : '' %>"><% if media.image? %><div class="cells-inputs-media__media-single-background" style="background-image: url(<%= media.attachment.url(:medium) %>)"></div><% else %><div class="cells-inputs-media__media-single-icon"><i class="fa fa-file-o" aria-hidden="true"></i></div><% end %></div>')
+    <% preview = LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3') %>
+
+    $(modalIndex).append('<%=j preview.show.html_safe %>')
 
   <% end %>
 
@@ -18,14 +20,11 @@ var modal = $('#<%= @name %>-modal')
 <% # Update pagination buttons %>
 <% if @medias && !@medias.empty? %>
 
-  var modalActions = $(modal).find('.cells-inputs-media__media-actions')
+  <% pagination = LatoCore::Elements::Pagination::Cell.new(total: @pagination_total, remote: true,
+  url: '/lato/media/cells/inputs_media_pagination', extra_params: { name: @name, per_page: @per_page }, current: @page) %>
 
-  var prevButton = $(modalActions).children().eq(0)
-  $(prevButton).addClass('PORCODIOOOO')
-  $(prevButton).find('a').attr('href', '/lato/media/cells/inputs_media_pagination?page=<%= @page - 1 %>&name=<%= @name %>')
+  var modalPagination = $(modal).find('.cells-inputs-media__media-pagination')
 
-  var nextButton = $(modalActions).children().eq(1)
-  $(nextButton).addClass('PORCAMADONNAAA')
-  $(nextButton).find('a').attr('href', '/lato/media/cells/inputs_media_pagination?page=<%= @page + 1 %>&name=<%= @name %>')
-  
+  $(modalPagination).html('<%=j pagination.show.html_safe %>')
+
 <% end %>
