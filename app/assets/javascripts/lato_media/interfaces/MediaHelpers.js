@@ -5,14 +5,14 @@ var MediaHelpers = (function () {
     // find inputs media
     var inputsMedia = $('#' + inputName)
     // find selected value
-    var value = $(inputsMedia).find('.cells-inputs-media__input').val()
+    var value = $(inputsMedia).find('.inputs-media__input').val()
     if (!value) { return }
 
     // find index
-    var index = $(inputsMedia).find('.cells-inputs-media__media-index')
+    var index = $(inputsMedia).find('.inputs-media__media-index')
     // manage style classes
-    $(index).find('.cells-inputs-media__media-single--active').removeClass('cells-inputs-media__media-single--active')
-    $(index).find('[data-media-id="' + value + '"]').addClass('cells-inputs-media__media-single--active')
+    $(index).find('.inputs-media__media-single--active').removeClass('inputs-media__media-single--active')
+    $(index).find('[data-media-id="' + value + '"]').addClass('inputs-media__media-single--active')
   }
 
   return {

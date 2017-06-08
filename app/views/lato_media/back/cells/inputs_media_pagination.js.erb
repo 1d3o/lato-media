@@ -3,7 +3,7 @@ var modal = $('#<%= @name %>-modal')
 <% # Update medias on index list %>
 <% if @medias && !@medias.empty? %>
 
-  var modalIndex = $(modal).find('.cells-inputs-media__media-index')
+  var modalIndex = $(modal).find('.inputs-media__media-index')
 
   $(modalIndex).html('')
 
@@ -25,7 +25,7 @@ var modal = $('#<%= @name %>-modal')
   <% pagination = LatoCore::Elements::Pagination::Cell.new(total: @pagination_total, remote: true,
   url: '/lato/media/cells/inputs_media_pagination', extra_params: { name: @name, per_page: @per_page }, current: @page) %>
 
-  var modalPagination = $(modal).find('.cells-inputs-media__media-pagination')
+  var modalPagination = $(modal).find('.inputs-media__media-pagination')
 
   $(modalPagination).html('<%=j pagination.show.html_safe %>')
 
