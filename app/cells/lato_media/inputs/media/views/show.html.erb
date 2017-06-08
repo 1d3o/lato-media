@@ -5,7 +5,8 @@
   <% end %>
 
   <div class="cells-inputs-media__content">
-    <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);",
+    <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#',
+    onclick: "Modal.open('#{@name}-modal', event); MediaHelpers.inputsMediaUpdateActive('#{@name}');",
     height: @args[:height], size: @args[:size]) %>
   </div>
 

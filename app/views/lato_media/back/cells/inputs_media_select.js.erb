@@ -1,5 +1,6 @@
-<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);",
-                                                    size: @size, height: @height) %>
+<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#',
+   onclick: "Modal.open('#{@name}-modal', event); MediaHelpers.inputsMediaUpdateActive('#{@name}');",
+   size: @size, height: @height) %>
 
 var cellContainer = $('#<%= @name %>')
 

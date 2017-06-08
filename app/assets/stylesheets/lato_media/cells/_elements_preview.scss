@@ -1,6 +1,12 @@
 .media-elements-preview {
   border: solid 2px #ecf0f1;
   display: block;
+  transition: all 0.25s;
+  outline: 0;
+
+  &:focus {
+    border-color: #34495e; 
+  }
 }
 
 .media-elements-preview__container {
