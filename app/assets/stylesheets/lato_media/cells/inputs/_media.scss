@@ -1,0 +1,50 @@
+.inputs-media {
+  margin: 15px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+.inputs-media__label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: $color_main;
+}
+
+.inputs-media__help {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  margin-top: 5px;
+  color: lighten($color_main, 50);
+}
+
+.inputs-media__content {
+
+}
+
+.inputs-media__media-modal {
+
+}
+
+.inputs-media__media-index {
+  margin-bottom: 5px;
+}
+
+.inputs-media__media-single--active {
+  border-color: $color_main;
+}
+
+.inputs-media__media-pagination {
+  margin-bottom: 40px;
+}
+
+.inputs-media__media-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color_white;
+  padding: 5px 15px;
+}

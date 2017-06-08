@@ -1,7 +1,7 @@
 <% if @args[:url] %>
   <a
     href="<%= @args[:url] %>"
-    class="media-elements-preview <%= @args[:class] %>"
+    class="elements-preview <%= @args[:class] %>"
     onclick="<%= @args[:onclick] %>"
     data-media-id="<%= @args[:media].id %>"
     <% if @args[:remote] %>
@@ -10,7 +10,7 @@
   >
 <% else %>
   <div
-    class="media-elements-preview <%= @args[:class] %>"
+    class="elements-preview <%= @args[:class] %>"
     onclick="<%= @args[:onclick] %>"
     data-media-id="<%= @args[:media].id %>"
   >
