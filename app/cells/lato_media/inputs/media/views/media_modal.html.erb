@@ -3,23 +3,23 @@
   <div class="cells-inputs-media__media-index row">
     <% @medias.each do |media| %>
       <%= LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3',
-      url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@args[:name]}&height=#{@args[:height]}&size=#{@args[:size]}",
+      url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@name}&height=#{@args[:height]}&size=#{@args[:size]}",
       remote: true) %>
     <% end %>
   </div>
 
   <div class="cells-inputs-media__media-pagination">
     <%=raw LatoCore::Elements::Pagination::Cell.new(total: @pagination_total, remote: true,
-    url: '/lato/media/cells/inputs_media_pagination', extra_params: { name: @args[:name],
+    url: '/lato/media/cells/inputs_media_pagination', extra_params: { name: @name,
     per_page: @args[:per_page], height: @args[:height], size: @args[:size] }) %>
   </div>
   
   <div class="cells-inputs-media__media-actions text-right">
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:remove],
-    style: 'danger', icon: 'ban', url: "/lato/media/cells/inputs_media_select?id=0&name=#{@args[:name]}&height=#{@args[:height]}&size=#{@args[:size]}",
+    style: 'danger', icon: 'ban', url: "/lato/media/cells/inputs_media_select?id=0&name=#{@name}&height=#{@args[:height]}&size=#{@args[:size]}",
     remote: true) %>
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
-    style: 'success', icon: 'check', onclick: "Modal.close('#{@args[:name]}-modal', event);") %>
+    style: 'success', icon: 'check', onclick: "Modal.close('#{@name}-modal', event);") %>
   </div>
 
 </div>
