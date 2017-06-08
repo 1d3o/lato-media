@@ -1,7 +1,17 @@
 <% if @args[:url] %>
-  <a href="<%= @args[:url] %>" class="media-elements-preview <%= @args[:class] %>" onclick="<%= @args[:onclick] %>">
+  <a
+    href="<%= @args[:url] %>"
+    class="media-elements-preview <%= @args[:class] %>"
+    onclick="<%= @args[:onclick] %>"
+    <% if @args[:remote] %>
+      data-remote="true"
+    <% end %>
+  >
 <% else %>
-  <div class="media-elements-preview <%= @args[:class] %>" onclick="<%= @args[:onclick] %>">
+  <div
+    class="media-elements-preview <%= @args[:class] %>"
+    onclick="<%= @args[:onclick] %>"
+  >
 <% end %>
 
   <% if @args[:media].exists? %>

@@ -2,7 +2,8 @@
 
   <div class="cells-inputs-media__media-index row">
     <% @medias.each do |media| %>
-      <%= LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3') %>
+      <%= LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3',
+      url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@args[:name]}", remote: true) %>
     <% end %>
   </div>
 
@@ -13,9 +14,9 @@
   
   <div class="cells-inputs-media__media-actions text-right">
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:remove],
-    style: 'danger', icon: 'ban') %>
+    style: 'danger', icon: 'ban', url: "/lato/media/cells/inputs_media_select?id=0&name=#{@args[:name]}", remote: true) %>
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
-    style: 'success', icon: 'check') %>
+    style: 'success', icon: 'check', onclick: "Modal.close('#{@args[:name]}-modal', event);") %>
   </div>
 
 </div>

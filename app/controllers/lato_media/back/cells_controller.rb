@@ -15,5 +15,15 @@ module LatoMedia
       end
     end
 
+    def inputs_media_select
+      @media = LatoMedia::Media.find_by(id: params[:id])
+      @media = LatoMedia::Media.new unless @media
+      @name = params[:name]
+
+      respond_to do |r|
+        r.js
+      end
+    end
+
   end
 end

@@ -11,6 +11,7 @@ module LatoMedia
       size: 'medium',
       height: 200,
       url: nil,
+      remote: false,
       onclick: ''
     }
 
@@ -33,8 +34,6 @@ module LatoMedia
     def set_conditions
       if @args[:media].image?
         @icon = ''
-      elsif @args[:media].zip?
-        @icon = 'file-o'
       else
         @icon = 'file-o'
       end

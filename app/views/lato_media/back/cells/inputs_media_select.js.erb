@@ -1,0 +1,13 @@
+<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);") %>
+
+var cellContainer = $('#<%= @name %>')
+
+$(cellContainer).find('.cells-inputs-media__content').html('<%=j preview.show.html_safe %>')
+
+$(cellContainer).find('.cells-inputs-media__input').val('<%= @media.id %>')
+
+<% unless @media.id %>
+
+  Modal.close('<%= @name %>-modal')
+
+<% end %>

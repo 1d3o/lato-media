@@ -9,7 +9,8 @@ var modal = $('#<%= @name %>-modal')
 
   <% @medias.each do |media| %>
 
-    <% preview = LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3') %>
+    <% preview =LatoMedia::Elements::Preview::Cell.new(media: media, class: 'xs-6 sm-4 md-3 lg-3',
+       url: "/lato/media/cells/inputs_media_select?id=#{media.id}&name=#{@name}", remote: true) %>
 
     $(modalIndex).append('<%=j preview.show.html_safe %>')
 

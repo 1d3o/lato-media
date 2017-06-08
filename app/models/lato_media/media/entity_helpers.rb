@@ -11,10 +11,5 @@ module LatoMedia
       attachment.content_type =~ /^image/
     end
 
-    # This function tells if the attachment is a compressed file.
-    def zip?
-      attachment.content_type =~ /^zip/
-    end
-
   end
 end

@@ -177,7 +177,13 @@
 
   <%=raw block.open %>
 
-    <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#') %>
+    <%=raw row.open %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#', class: 'md-6') %>
+
+      <%=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#', remote: true, class: 'md-6') %>
+
+    <%=raw row.close %>
     
   <%=raw block.close %>
 
@@ -192,7 +198,9 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#') <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#', class: 'md-6') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :preview).new(media: @media, url: '#', remote: true, class: 'md-6') <%= erb_close_tag %>
 
 <%=raw code.close %>
 
