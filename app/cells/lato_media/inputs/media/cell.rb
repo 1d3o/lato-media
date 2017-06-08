@@ -40,6 +40,8 @@ module LatoMedia
       @media = ((@args[:value] && !@args[:value].blank?) ? LatoMedia::Media.find_by(id: @args[:value]) : LatoMedia::Media.new)
       @medias = LatoMedia::Media.all.reverse.first(@args[:per_page])
       @pagination_total = (LatoMedia::Media.all.length / @args[:per_page].to_f).ceil
+      # set unique name for the input
+      @name = @args[:name].parameterize
     end
 
   end

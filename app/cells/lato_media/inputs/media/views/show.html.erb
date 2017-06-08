@@ -1,11 +1,11 @@
-<div class="cells-inputs-media <%= @args[:class] %>" id="<%= @args[:name] %>">
+<div class="cells-inputs-media <%= @args[:class] %>" id="<%= @name %>">
 
   <% if @show_label %>
     <label class="cells-inputs-media__label" for=""><%= @args[:label] %></label>
   <% end %>
 
   <div class="cells-inputs-media__content">
-    <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@args[:name]}-modal', event);",
+    <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "Modal.open('#{@name}-modal', event);",
     height: @args[:height], size: @args[:size]) %>
   </div>
 
@@ -17,6 +17,6 @@
   <input type="hidden" name="<%= @args[:name] %>" value="<%= @args[:value] %>" class="cells-inputs-media__input">
 
   <!-- Modal -->
-  <%=raw LatoCore::Elements::Modal::Cell.new(id: "#{@args[:name]}-modal",
+  <%=raw LatoCore::Elements::Modal::Cell.new(id: "#{@name}-modal",
   title: LANGUAGES[:lato_media][:mixed][:select_media], render: render('./media_modal.html')) %>
 </div>
