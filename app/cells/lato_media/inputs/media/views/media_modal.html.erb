@@ -8,11 +8,15 @@
     <% end %>
   </div>
 
+  <% if @pagination_total > 1 %>
+
   <div class="inputs-media__media-pagination">
     <%=raw LatoCore::Elements::Pagination::Cell.new(total: @pagination_total, remote: true,
     url: '/lato/media/cells/inputs_media_pagination', extra_params: { name: @name,
     per_page: @args[:per_page], height: @args[:height], size: @args[:size] }) %>
   </div>
+
+  <% end %>
   
   <div class="inputs-media__media-actions text-right">
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:remove],
