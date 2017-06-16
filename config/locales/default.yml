@@ -35,7 +35,4 @@ mixed:
   delete_media_confirm_negative: 'No'
   confirm: Confirm
   select_media: Select media
-  next: Next
-  prev: Prev
-  remove: Remove
   file_not_present: File not present

@@ -8,6 +8,7 @@ var MediaSelector = (function () {
     if (event) { event.preventDefault() }
     // listen events on modal
     _listenLoadIndexAction(inputId, maxItems)
+    _listenCancelButtonAction(inputId)
     // load index for media selector
     _reloadIndex()
     // open the modal
@@ -19,6 +20,7 @@ var MediaSelector = (function () {
     if (event) { event.preventDefault() }
     // remove event listener
     $('#media__media_selector').unbind('loadIndexAction')
+    $('#media__media_selector_cancel_button').unbind('click')
     // close the modal
     Modal.close('media__media_selector')
   }
@@ -42,6 +44,16 @@ var MediaSelector = (function () {
         // update view for selected media
         _updateActiveMedias(inputId)
       })
+    })
+  }
+
+  // This function listens the click on cancel button to clear the input.
+  function _listenCancelButtonAction (inputId) {
+    $('#media__media_selector_cancel_button').bind('click', function () {
+      var input = $('#' + inputId)
+      $(input).val('')
+      $(input).trigger("change")
+      close()
     })
   }
 

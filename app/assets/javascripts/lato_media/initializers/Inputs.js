@@ -1,7 +1,6 @@
 var MediaInputsInitializer = (function () {
 
   function initializeMedia () {
-    console.log('initialize')
     $('.inputs-media .inputs-media__input').change(function () {
       // get utils data
       var id = $(this).attr('id')
@@ -19,6 +18,7 @@ var MediaInputsInitializer = (function () {
     })
   }
 
+  // This function updates uri params.
   function _updateQueryStringParameter(uri, key, value) {
     var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
     var separator = uri.indexOf('?') !== -1 ? "&" : "?";

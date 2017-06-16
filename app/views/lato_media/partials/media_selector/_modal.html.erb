@@ -3,6 +3,8 @@
   <div class="partials__media-selector-index-container"></div>
 
   <div class="partials__media-selector-buttons">
+    <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:cancel],
+    style: 'danger', icon: 'ban', id: 'media__media_selector_cancel_button') %>
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
     style: 'success', icon: 'check', onclick: 'MediaSelector.close(event);') %>
   </div>

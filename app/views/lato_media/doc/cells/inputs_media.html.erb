@@ -30,9 +30,9 @@
 
       <%=raw row.open %>
 
-        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6', value: @media.id) %>
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'xs-12 sm-6 md-6', value: @media.id) %>
 
-        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6') %>
+        <%=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'xs-12 sm-6 md-6') %>
 
       <%=raw row.close %>
 
@@ -51,9 +51,9 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6', value: @media.id) <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'xs-12 sm-6 md-6', value: @media.id) <%= erb_close_tag %>
 
-<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'md-6') <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell('LatoMedia', :inputs, :media).new(name: 'sample', label: 'Select a media', class: 'xs-12 sm-6 md-6') <%= erb_close_tag %>
 
 <%=raw code.close %>
 
