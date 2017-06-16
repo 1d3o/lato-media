@@ -1,5 +1,11 @@
-<div class="inputs-media <%= @args[:class] %>" id="<%= @name %>">
+<div class="inputs-media <%= @args[:class] %>" id="inputs-media-<%= @id %>">
 
+  <div class="inputs-media__preview">
+
+    <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#',
+    onclick: "MediaSelector.open('#{@id}', 1);") %>
+
+  </div>
 
   <input
     type="hidden"

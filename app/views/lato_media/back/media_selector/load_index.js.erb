@@ -3,7 +3,7 @@ console.log('LOAD INDEX')
 
 // render partial
 <% partial = render('lato_media/partials/media_selector/modal_index') %>
-$('#media__media_selector .partials__media-selector-modal').html('<%=j partial.html_safe %>')
+$('#media__media_selector .partials__media-selector-index-container').html('<%=j partial.html_safe %>')
 
 // trigger event of change
 $('#media__media_selector').trigger('loadIndexAction')

@@ -3,6 +3,7 @@
   display: block;
   transition: all 0.25s;
   outline: 0;
+  overflow: hidden;
 
   &:focus {
     border-color: $color_main; 

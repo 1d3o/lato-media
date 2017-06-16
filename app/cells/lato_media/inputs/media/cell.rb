@@ -36,6 +36,9 @@ module LatoMedia
       @show_help = !@args[:help].nil? && !@args[:help].blank?
       # set correct id
       @id = @args[:id] ? @args[:id] : SecureRandom.hex(5) # generate random id if not custom id is set.
+      # set current media
+      media = LatoMedia::Media.find_by(id: @args[:value])
+      @media = media ? media : LatoMedia::Media.new
     end
 
   end

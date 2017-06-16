@@ -8,7 +8,7 @@ module LatoMedia
 
     @@default_args = {
       class: '',
-      size: 'medium',
+      size: 'large',
       height: 200,
       url: nil,
       remote: false,
