@@ -10,7 +10,8 @@ module LatoMedia
       value: '',
       label: '',
       help: '',
-      class: 'md-12'
+      class: 'md-12',
+      id: nil
     }
 
     def initialize(args = {})
@@ -33,6 +34,8 @@ module LatoMedia
       # set show options
       @show_label = !@args[:label].nil? && !@args[:label].blank?
       @show_help = !@args[:help].nil? && !@args[:help].blank?
+      # set correct id
+      @id = @args[:id] ? @args[:id] : SecureRandom.hex(5) # generate random id if not custom id is set.
     end
 
   end
