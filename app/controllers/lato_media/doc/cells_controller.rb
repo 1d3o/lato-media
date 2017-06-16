@@ -9,6 +9,8 @@ module LatoMedia
       set_random_media
     end
 
+    def inputs_gallery; end
+
     private
 
     def set_random_media
