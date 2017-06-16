@@ -10,10 +10,7 @@ module LatoMedia
       value: '',
       label: '',
       help: '',
-      class: 'md-12',
-      per_page: 12,
-      size: 'medium',
-      height: 200
+      class: 'md-12'
     }
 
     def initialize(args = {})
@@ -36,13 +33,6 @@ module LatoMedia
       # set show options
       @show_label = !@args[:label].nil? && !@args[:label].blank?
       @show_help = !@args[:help].nil? && !@args[:help].blank?
-      # find requested media
-      @media = LatoMedia::Media.find_by(id: @args[:value])
-      @media  = LatoMedia::Media.new unless @media
-      @medias = LatoMedia::Media.all.reverse.first(@args[:per_page])
-      @pagination_total = (LatoMedia::Media.all.length / @args[:per_page].to_f).ceil
-      # set unique name for the input
-      @name = @args[:name].parameterize
     end
 
   end

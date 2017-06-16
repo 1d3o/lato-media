@@ -42,3 +42,9 @@ assets:
   media_script:
     path: lato_media/application
     type: javascript
+
+# set partials added at the end of the layout.
+partials:
+  media_media_selector:
+    path: lato_media/partials/media_selector
+    position: 1
