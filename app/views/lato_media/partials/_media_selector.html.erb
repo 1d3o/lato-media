@@ -1,2 +1,11 @@
-<%=raw cell(:elements, :modal).new(id: 'media__media_selector', title: LANGUAGES[:lato_media][:mixed][:select_media],
-                               render: render('lato_media/partials/media_selector/modal')) %>
+<div class="partials__media-selector">
+
+  <%=raw cell(:elements, :modal).new(id: 'media__media_selector', title: LANGUAGES[:lato_media][:mixed][:select_media],
+  render: render('lato_media/partials/media_selector/modal')) %>
+
+  <div class="partials__media-selector-actions">
+    <%= link_to 'load_index', lato_media.media_selector_load_index_path, remote: true, id: 'load_index' %>
+  </div>
+
+</div>
+
