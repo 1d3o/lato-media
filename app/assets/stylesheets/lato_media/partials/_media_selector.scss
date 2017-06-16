@@ -15,6 +15,10 @@
 }
 
 .partials__media-selector-index-list {
+
+  .elements-preview {
+    cursor: pointer;
+  }
   
   .elements-preview--active {
     box-shadow: 0px 11px 20px rgba(41, 59, 90, 0.08);

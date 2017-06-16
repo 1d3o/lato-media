@@ -15,5 +15,13 @@ module LatoMedia
       end
     end
 
+    def load_inputs_media
+      value = params[:value] ? params[:value].to_i : nil
+      media = LatoMedia::Media.find_by(id: params[:value])
+      # set values for render
+      @media = media ? media : LatoMedia::Media.new
+      @id = params[:id]
+    end
+
   end
 end

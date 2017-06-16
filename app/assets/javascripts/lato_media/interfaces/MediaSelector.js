@@ -9,13 +9,13 @@ var MediaSelector = (function () {
     // listen events on modal
     _listenLoadIndexAction(inputId, maxItems)
     // load index for media selector
-    runAction('load_index')
+    _reloadIndex()
     // open the modal
     Modal.open('media__media_selector')
   }
 
   // This function closes the media selector and remove all event watcher on it.
-  function close (inputId, event) {
+  function close (event) {
     if (event) { event.preventDefault() }
     // remove event listener
     $('#media__media_selector').unbind('loadIndexAction')
@@ -23,9 +23,9 @@ var MediaSelector = (function () {
     Modal.close('media__media_selector')
   }
 
-  // This function run a single action for the media selector.
-  function runAction (action) {
-    $('.partials__media-selector-actions #' + action).trigger('click')
+  // This function reload the index list for the medias.
+  function _reloadIndex () {
+    $('#media__media_selector_load_index').trigger('click')
   }
 
   // This functions listens the dom cha on the media selector and run the correct actions.
@@ -68,6 +68,7 @@ var MediaSelector = (function () {
     }
     // update input value
     $(input).val(selectedMedias.join())
+    $(input).trigger("change") // manually trigger change event
   }
 
   // This function update the style to show active medias.
@@ -90,8 +91,7 @@ var MediaSelector = (function () {
 
   return {
     open: open,
-    close: close,
-    runAction: runAction
+    close: close
   }
 
 })()

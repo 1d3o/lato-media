@@ -1,0 +1,6 @@
+// find preview
+var preview = $('#inputs-media-<%= @id %>').find('.inputs-media__preview')
+
+// update preview
+<% preview = LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#', onclick: "MediaSelector.open('#{@id}', 1);") %>
+$(preview).html('<%=j preview.show.html_safe %>')

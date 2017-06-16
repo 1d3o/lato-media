@@ -4,7 +4,7 @@
 
   <div class="partials__media-selector-buttons">
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
-    style: 'success', icon: 'check', onclick: "MediaSelector.close('#{@id}', event);") %>
+    style: 'success', icon: 'check', onclick: 'MediaSelector.close(event);') %>
   </div>
 
 </div>

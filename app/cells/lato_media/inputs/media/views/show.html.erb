@@ -8,10 +8,13 @@
   </div>
 
   <input
+    class="inputs-media__input"
     type="hidden"
     value="<%= @args[:value] %>"
     name="<%= @args[:name] %>"
     id="<%= @id %>"
   />
+
+  <%= link_to 'load_inputs_media_preview', '/lato/media/media_selector/load_inputs_media', remote: true, class: 'inputs-media__reload' %>
 
 </div>

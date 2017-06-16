@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require_tree ./initializers
 //= require_tree ./interfaces
+
+$(window).load(function () {
+  MediaInputsInitializer.init()
+})
