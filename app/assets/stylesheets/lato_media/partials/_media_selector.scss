@@ -22,8 +22,10 @@
   
   .elements-preview--active {
     border-color: $color_main;
+    background-color: $color_main;
 
     .elements-preview__image-background {
+      background-color: $color_main;
       opacity: 0.5;
     }
   }
