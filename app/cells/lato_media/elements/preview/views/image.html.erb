@@ -1,4 +1,9 @@
-<div class="elements-preview__container elements-preview__image" style="height: <%= @args[:height] %>px">
+<div
+  class="elements-preview__container elements-preview__image"
+  <% if @args[:height] %>
+    style="height: <%= @args[:height] %>px; padding-bottom : 0;"
+  <% end %>
+>
   <div class="elements-preview__image-background" style="background-image: url(<%= @args[:media].attachment.url(@args[:size]) %>)"></div>
 
   <div class="elements-preview__label"><%= @args[:media].title %></div>

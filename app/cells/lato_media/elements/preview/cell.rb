@@ -9,7 +9,7 @@ module LatoMedia
     @@default_args = {
       class: '',
       size: 'large',
-      height: 200,
+      height: nil,
       url: nil,
       remote: false,
       onclick: ''

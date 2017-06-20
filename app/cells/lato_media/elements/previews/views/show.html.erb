@@ -1,0 +1,31 @@
+<% if @args[:url] %>
+  <a
+    href="<%= @args[:url] %>"
+    class="elements-previews <%= @args[:class] %>"
+    onclick="<%= @args[:onclick] %>"
+    <% if @args[:remote] %>
+      data-remote="true"
+    <% end %>
+  >
+<% else %>
+  <div
+    class="elements-previews <%= @args[:class] %>"
+    onclick="<%= @args[:onclick] %>"
+  >
+<% end %>
+
+  <div class="row">
+
+    <% @args[:medias].each do |media| %>
+
+      <%= LatoMedia::Elements::Preview::Cell.new(media: media, size: @args[:size], class: 'xs-6 sm-4 md-3 lg-3') %>
+
+    <% end %>
+
+  </div>
+
+<% if @args[:url] %>
+  </a>
+<% else %>
+  </div>
+<% end %>

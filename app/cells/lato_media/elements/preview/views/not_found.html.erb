@@ -1,4 +1,9 @@
-<div class="elements-preview__container elements-preview__not-found" style="height: <%= @args[:height] %>px">
+<div
+  class="elements-preview__container elements-preview__not-found"
+  <% if @args[:height] %>
+    style="height: <%= @args[:height] %>px; padding-bottom : 0;"
+  <% end %>
+>
   <div class="elements-preview__icon">
     <i class="fa fa-ban" aria-hidden="true"></i>
   </div>

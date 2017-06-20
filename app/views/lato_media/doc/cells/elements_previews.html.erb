@@ -1,0 +1,87 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Previews') %>
+
+    <p>A Previews is a small preview of a multiple media element.</p>
+
+    <p>NB: All examples take a sample media from your gallery as media to show.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Previews', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: 'md-12') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: 'md-12') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Previews with options', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: ' sm-12 md-6') %>
+
+    <%=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: ' sm-12 md-6', size: 'thumb') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: ' sm-12 md-6') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell('LatoMedia', :elements, :previews).new(medias: @medias, class: ' sm-12 md-6', size: 'thumb') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

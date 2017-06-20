@@ -3,6 +3,9 @@ module LatoMedia
 
     def elements_preview
       set_random_media
+    end
+
+    def elements_previews
       set_random_medias(10)
     end
 
