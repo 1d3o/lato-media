@@ -18,6 +18,24 @@ var MediaInputsInitializer = (function () {
     })
   }
 
+  function initializeGallery () {
+    $('.inputs-gallery .inputs-gallery__input').change(function () {
+      // get utils data
+      var id = $(this).attr('id')
+      var gallery = $('#inputs-gallery-' + id)
+      var input = $(gallery).find('.inputs-gallery__input')
+      var action = $(gallery).find('.inputs-gallery__reload')
+      var value = $(input).attr('value')
+      // generate new url
+      var url = action.attr('href')
+      url = _updateQueryStringParameter(url, 'id', id)
+      url = _updateQueryStringParameter(url, 'value', value)
+      // update url and send request
+      $(action).attr('href', url)
+      $(action).trigger('click')
+    })
+  }
+
   // This function updates uri params.
   function _updateQueryStringParameter(uri, key, value) {
     var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
@@ -34,6 +52,7 @@ var MediaInputsInitializer = (function () {
 
   function init () {
     initializeMedia()
+    initializeGallery()
   }
 
   return {

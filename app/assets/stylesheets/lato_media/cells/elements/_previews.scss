@@ -1,3 +1,23 @@
 .elements-previews {
-  
+  outline: 0;
+}
+
+.elements-previews__list {
+  border-radius: 10px;
+  border: solid 1px $color_grey;
+}
+
+.elements-previews__not-found {
+  border-radius: 10px;
+  border: solid 1px $color_grey;
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

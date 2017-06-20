@@ -4,8 +4,10 @@
     style="height: <%= @args[:height] %>px; padding-bottom : 0;"
   <% end %>
 >
-  <div class="elements-preview__icon">
-    <i class="fa fa-<%= @icon %>" aria-hidden="true"></i>
+  <div class="elements-preview__icon-container">
+    <div class="elements-preview__icon">
+      <i class="fa fa-<%= @icon %>" aria-hidden="true"></i>
+    </div>
   </div>
 
   <div class="elements-preview__label"><%= @args[:media].title %></div>

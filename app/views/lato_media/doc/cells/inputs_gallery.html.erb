@@ -32,6 +32,8 @@
 
         <%=raw cell('LatoMedia', :inputs, :gallery).new(name: 'sample', label: 'Select multiple media', class: 'xs-12 sm-6 md-6') %>
 
+        <%=raw cell('LatoMedia', :inputs, :gallery).new(name: 'sample', label: 'Select multiple media', class: 'xs-12 sm-6 md-6', value: @medias) %>
+
       <%=raw row.close %>
 
     <%=raw form.close %>

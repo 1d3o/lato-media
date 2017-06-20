@@ -36,3 +36,4 @@ mixed:
   confirm: Confirm
   select_media: Select media
   file_not_present: File not present
+  no_media_to_show: There are not media to show

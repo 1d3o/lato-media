@@ -14,15 +14,27 @@
   >
 <% end %>
 
-  <div class="row">
+  <% if @args[:medias].length > 0 %>
 
-    <% @args[:medias].each do |media| %>
+    <div class="elements-previews__list row">
 
-      <%= LatoMedia::Elements::Preview::Cell.new(media: media, size: @args[:size], class: 'xs-6 sm-4 md-3 lg-3') %>
+      <% @args[:medias].each do |media| %>
 
-    <% end %>
+        <%= LatoMedia::Elements::Preview::Cell.new(media: media, size: @args[:size], class: 'xs-6 sm-4 md-3 lg-3') %>
 
-  </div>
+      <% end %>
+
+    </div>
+
+  <% else %>
+
+    <div class="elements-previews__not-found">
+
+      <span><%= LANGUAGES[:lato_media][:mixed][:no_media_to_show] %></span>
+
+    </div>
+
+  <% end %>
 
 <% if @args[:url] %>
   </a>

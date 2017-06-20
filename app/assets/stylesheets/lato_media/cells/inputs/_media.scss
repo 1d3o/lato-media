@@ -1,5 +1,15 @@
 .inputs-media {
   
+  &:hover {
+    .elements-preview__container {
+      background-color: $color_main;
+    }
+
+    .elements-preview__image-background, .elements-preview__icon-container {
+      transition: all 0.25s;
+      opacity: 0.75;
+    }
+  }
 }
 
 .inputs-media__preview {

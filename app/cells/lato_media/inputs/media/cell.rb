@@ -37,8 +37,26 @@ module LatoMedia
       # set correct id
       @id = @args[:id] ? @args[:id] : SecureRandom.hex(5) # generate random id if not custom id is set.
       # set current media
-      media = LatoMedia::Media.find_by(id: @args[:value])
+      media = get_media
       @media = media ? media : LatoMedia::Media.new
+      # set current value
+      @value = get_value
+    end
+
+    def get_media
+      if @args[:value].is_a?(String)
+        LatoMedia::Media.find_by(id: @args[:value].to_i)
+      elsif @args[:value].is_a?(Integer)
+        LatoMedia::Media.find_by(id: @args[:value])
+      elsif @args[:value].class == LatoMedia::Media
+        @args[:value]
+      else
+        raise 'Media value not accepted'
+      end
+    end
+
+    def get_value
+      @media.id if @media
     end
 
   end

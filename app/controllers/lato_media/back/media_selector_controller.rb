@@ -23,5 +23,12 @@ module LatoMedia
       @id = params[:id]
     end
 
+    def load_inputs_gallery
+      value = params[:value].split(',')
+      # set values for render
+      @medias = LatoMedia::Media.where(id: value)
+      @id = params[:id]
+    end
+
   end
 end

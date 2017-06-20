@@ -1,0 +1,20 @@
+<div class="inputs-gallery <%= @args[:class] %>" id="inputs-gallery-<%= @id %>">
+
+  <div class="inputs-gallery__preview">
+
+    <%=raw LatoMedia::Elements::Previews::Cell.new(medias: @medias, url: '#',
+    onclick: "MediaSelector.open('#{@id}', 99);") %>
+
+  </div>
+
+  <input
+    class="inputs-gallery__input"
+    type="hidden"
+    value="<%= @value %>"
+    name="<%= @args[:name] %>"
+    id="<%= @id %>"
+  />
+
+  <%= link_to 'load_inputs_gallery_previews', '/lato/media/media_selector/load_inputs_gallery', remote: true, class: 'inputs-gallery__reload' %>
+
+</div>

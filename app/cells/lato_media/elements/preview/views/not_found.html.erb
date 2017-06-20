@@ -4,8 +4,11 @@
     style="height: <%= @args[:height] %>px; padding-bottom : 0;"
   <% end %>
 >
-  <div class="elements-preview__icon">
-    <i class="fa fa-ban" aria-hidden="true"></i>
+
+  <div class="elements-preview__icon-container">
+    <div class="elements-preview__icon">
+      <i class="fa fa-ban" aria-hidden="true"></i>
+    </div>
   </div>
 
   <div class="elements-preview__label"><%= LANGUAGES[:lato_media][:mixed][:file_not_present] %></div>
