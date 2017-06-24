@@ -2,5 +2,5 @@
 var preview = $('#inputs-gallery-<%= @id %>').find('.inputs-gallery__preview')
 
 // update preview
-<% preview = LatoMedia::Elements::Previews::Cell.new(medias: @medias, url: '#', onclick: "MediaSelector.open('#{@id}', 99);") %>
+<% preview = LatoMedia::Elements::Previews::Cell.new(medias: @medias, url: '#', onclick: "MediaSelector.open('#{@id}', 99, event);") %>
 $(preview).html('<%=j preview.show.html_safe %>')

@@ -3,7 +3,7 @@
   <div class="inputs-gallery__preview">
 
     <%=raw LatoMedia::Elements::Previews::Cell.new(medias: @medias, url: '#',
-    onclick: "MediaSelector.open('#{@id}', 99);") %>
+    onclick: "MediaSelector.open('#{@id}', 99, event);") %>
 
   </div>
 
