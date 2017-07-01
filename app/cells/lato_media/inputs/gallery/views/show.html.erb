@@ -1,11 +1,30 @@
 <div class="inputs-gallery inputs__container <%= @args[:class] %>" id="inputs-gallery-<%= @id %>">
 
+  <% # Label from lato_core cells %>
+  <% if @show_label %>
+    <label
+      class="inputs__label"
+      for="<%= @args[:name] %>"
+    >
+      <%= @args[:label] %>
+    </label>
+  <% end %>
+
   <div class="inputs-gallery__preview">
 
     <%=raw LatoMedia::Elements::Previews::Cell.new(medias: @medias, url: '#',
     onclick: "MediaSelector.open('#{@id}', 99, event);") %>
 
   </div>
+
+  <% # Help from lato_core cells %>
+  <% if @show_help %>
+    <div
+      class="inputs__help"
+    >
+      <%= @args[:help] %>
+    </div>
+  <% end %>
 
   <input
     class="inputs-gallery__input"

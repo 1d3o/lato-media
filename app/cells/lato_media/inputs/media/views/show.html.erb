@@ -1,11 +1,30 @@
 <div class="inputs-media inputs__container <%= @args[:class] %>" id="inputs-media-<%= @id %>">
 
+  <% # Label from lato_core cells %>
+  <% if @show_label %>
+    <label
+      class="inputs__label"
+      for="<%= @args[:name] %>"
+    >
+      <%= @args[:label] %>
+    </label>
+  <% end %>
+
   <div class="inputs-media__preview">
 
     <%=raw LatoMedia::Elements::Preview::Cell.new(media: @media, url: '#',
     onclick: "MediaSelector.open('#{@id}', 1, event);") %>
 
   </div>
+
+  <% # Help from lato_core cells %>
+  <% if @show_help %>
+    <div
+      class="inputs__help"
+    >
+      <%= @args[:help] %>
+    </div>
+  <% end %>
 
   <input
     class="inputs-media__input"
@@ -14,6 +33,7 @@
     name="<%= @args[:name] %>"
     id="<%= @id %>"
   />
+  
 
   <%= link_to 'load_inputs_media_preview', '/lato/media/media_selector/load_inputs_media', remote: true, class: 'inputs-media__reload' %>
 

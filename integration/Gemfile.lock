@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ideonetwork/lato-core
-  revision: e0c539a802ad3fe0edd98dfb74d9948fa3804b96
+  revision: 6d0e460b7701251ad2d9834e1412a5f32e2f4878
   specs:
     lato_core (2.0.1)
       bcrypt (>= 3.1.7)
@@ -168,7 +168,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
-    rb-fsevent (0.10.1)
+    rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ruby_dep (1.5.0)
