@@ -9,6 +9,8 @@ var MediaSelector = (function () {
     // listen events on modal
     _listenLoadIndexAction(inputId, maxItems)
     _listenCancelButtonAction(inputId)
+    _listenListButtonAction(inputId)
+    _listenAddButtonAction(inputId)
     // load index for media selector
     _reloadIndex()
     // open the modal
@@ -54,6 +56,20 @@ var MediaSelector = (function () {
       $(input).val('')
       $(input).trigger("change")
       close()
+    })
+  }
+
+  // This function listens the click on add button to update the input.
+  function _listenAddButtonAction (inputId) {
+    $('#media__media_selector_add_button').bind('click', function () {
+      $('#media__media_selector_load_form').trigger('click')
+    })
+  }
+
+  // This function listens the click on add button to update the input.
+  function _listenListButtonAction (inputId) {
+    $('#media__media_selector_list_button').bind('click', function () {
+      $('#media__media_selector_load_index').trigger('click')
     })
   }
 

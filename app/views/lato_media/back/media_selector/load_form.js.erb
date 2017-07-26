@@ -1,0 +1,9 @@
+// render partial
+<% partial = render('lato_media/partials/media_selector/modal_form') %>
+$('#media__media_selector .partials__media-selector-index-container').html('<%=j partial.html_safe %>')
+
+// trigger event of change
+$('#media__media_selector').trigger('loadIndexAction')
+
+// initialize inputs
+InputsInitializer.init()

@@ -1,6 +1,8 @@
 module LatoMedia
   class Back::MediasController < Back::BackController
 
+    skip_before_action :verify_authenticity_token, only: [:create] # permit loading without token
+
     before_action do
       core__set_menu_active_item('media_medias')
     end

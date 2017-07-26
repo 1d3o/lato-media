@@ -3,6 +3,10 @@
   <div class="partials__media-selector-index-container"></div>
 
   <div class="partials__media-selector-buttons">
+    <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:add_media],
+    style: 'primary', icon: 'plus', id: 'media__media_selector_add_button') %>
+    <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:show_all_media],
+    style: 'primary', icon: 'picture-o', id: 'media__media_selector_list_button') %>
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:cancel],
     style: 'danger', icon: 'ban', id: 'media__media_selector_cancel_button') %>
     <%=raw LatoCore::Elements::Button::Cell.new(url: '#', label: LANGUAGES[:lato_media][:mixed][:confirm],
