@@ -16,6 +16,9 @@ module LatoMedia
     end
 
     def load_form
+      # reload cells settings
+      core__cells_initialize
+
       respond_to do |r|
         r.js
       end
