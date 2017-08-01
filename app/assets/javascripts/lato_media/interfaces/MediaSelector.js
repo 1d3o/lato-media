@@ -51,24 +51,27 @@ var MediaSelector = (function () {
 
   // This function listens the click on cancel button to clear the input.
   function _listenCancelButtonAction (inputId) {
-    $('#media__media_selector_cancel_button').bind('click', function () {
+    $('#media__media_selector_cancel_button').bind('click', function (e) {
+      e.preventDefault()
       var input = $('#' + inputId)
       $(input).val('')
-      $(input).trigger("change")
+      $(input).trigger('change')
       close()
     })
   }
 
   // This function listens the click on add button to update the input.
   function _listenAddButtonAction (inputId) {
-    $('#media__media_selector_add_button').bind('click', function () {
+    $('#media__media_selector_add_button').bind('click', function (e) {
+      e.preventDefault()
       $('#media__media_selector_load_form').trigger('click')
     })
   }
 
   // This function listens the click on add button to update the input.
   function _listenListButtonAction (inputId) {
-    $('#media__media_selector_list_button').bind('click', function () {
+    $('#media__media_selector_list_button').bind('click', function (e) {
+      e.preventDefault()
       $('#media__media_selector_load_index').trigger('click')
     })
   }
