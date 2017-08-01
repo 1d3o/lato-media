@@ -1,0 +1,39 @@
+menu:
+  medias: Media
+  medias_new: Aggiungi nuovo
+  medias_all: Visualizza tutti
+  documentation: Doc. Media
+
+pages:
+  medias: Media
+  medias_new: Nuovo media
+  medias_edit: Modifica media
+  documentation: Documentazione
+
+flashes:
+  media_not_found: Media non trovato
+  media_destroy_success: Media eliminato con successo
+  media_update_success: Media aggiornato con successo
+
+forms:
+  title: Titolo
+  description: Descrizione
+  url: Url
+  thumb_url: Thumbnail url
+  medium_url: Medium url
+  large_url: Large url
+
+mixed:
+  add_media: Aggiungi media
+  load_media_files: Carica i file qui
+  show_all_media: Visualizza tutti i media
+  delete_media: Elimina media
+  cancel: Cancella
+  save: Salva
+  delete_media_confirm: Sei sicuro di eliminare il media?
+  delete_media_confirm_positive: Conferma
+  delete_media_confirm_negative: Annulla
+  confirm: Conferma
+  select_media: Seleziona media
+  file_not_present: File non presente
+  no_media_to_show: Nessun media da visualizzare
