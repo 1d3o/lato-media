@@ -45,3 +45,9 @@
   padding: 15px;
   border-top: solid 2px $color_grey;
 }
+
+.partials__media-selector-form {
+  form {
+    min-height: 350px;
+  }
+}

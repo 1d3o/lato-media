@@ -4,6 +4,17 @@
 
 .medias__dropzone {
   form {
-    min-height: 300px;
+    min-height: 350px;
   }
+}
+
+.medias__dropzone-modal-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color_white;
+  text-align: right;
+  padding: 15px;
+  border-top: solid 2px $color_grey;
 }
