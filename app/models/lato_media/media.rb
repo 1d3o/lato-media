@@ -7,13 +7,18 @@ module LatoMedia
       thumb: "#{CONFIGS[:lato_media][:thumb_media_width]}x#{CONFIGS[:lato_media][:thumb_media_width]}>"
     }
 
+    IMAGES_PROCESSORS = [:thumbnail, :paperclip_optimizer]
+
     # Dependencies:
 
     include Media::EntityHelpers
 
     # Other settings:
 
-    has_attached_file :attachment, styles: lambda { |a| a.content_type =~ /^image/ ? IMAGES_SIZES : {} }
+    has_attached_file :attachment,
+                      styles: lambda { |a| a.content_type =~ /^image/ ? IMAGES_SIZES : {} },
+                      processors: IMAGES_PROCESSORS
+
     do_not_validate_attachment_file_type :attachment
 
     # Callbacks:

@@ -27,6 +27,10 @@ Gem::Specification.new do |s|
   # doc: https://github.com/thoughtbot/paperclip
   s.add_runtime_dependency 'paperclip', '>= 5.0.0'
 
+  # attachments optimizer
+  # doc: https://github.com/janfoeh/paperclip-optimizer
+  s.add_runtime_dependency 'paperclip-optimizer'
+
   # Dev dependencies:
 
   s.add_development_dependency 'sqlite3'

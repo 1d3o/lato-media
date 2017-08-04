@@ -37,6 +37,9 @@ module LatoMedia
       end
 
       render json: {}, status: 200
+    rescue => e
+      puts e
+      render json: {error: 'There was an internal error'}, status: 500
     end
 
     def edit

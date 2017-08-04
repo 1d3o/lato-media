@@ -4,6 +4,7 @@ module LatoMedia
 
     require 'rubygems'
     require 'paperclip'
+    require 'paperclip-optimizer'
 
     # add routes support
     initializer 'Add gem routes to application', before: :load_config_initializers do
