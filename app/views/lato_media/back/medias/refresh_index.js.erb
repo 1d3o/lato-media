@@ -2,10 +2,12 @@
 $('.medias__medias-index').replaceWith('<%=j render 'lato_media/back/medias/shared/index' %>')
 
 // Close modal
-Modal.close('dropzone-modal')
+CoreModal.close('dropzone-modal')
 
 // Refresh modal content
-$('.medias__dropzone-modal').replaceWith('<%=j render 'lato_media/back/medias/shared/dropzone_modal' %>')
+var dropzoneContainer = $('#dropzone-modal').find('.medias__dropzone-modal')
+$(dropzoneContainer).replaceWith('<%=j render 'lato_media/back/medias/shared/dropzone_modal' %>')
 
 // Re-initialize dropzone
-InputsInitializer.init()
+var dropzone = $('#dropzone-modal').find('.inputs-dropzone')
+CoreMediapicker.initializeDropzone(dropzone)

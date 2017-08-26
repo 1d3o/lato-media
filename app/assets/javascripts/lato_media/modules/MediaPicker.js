@@ -1,4 +1,38 @@
-var MediaSelector = (function () {
+var MediaPicker = (function () {
+
+  function initializeMediaInput (media) {
+    var mediaInput = $(media).find('.inputs-media__input')
+    $(mediaInput).change(function () {
+      // get utils data
+      var id = $(this).attr('id')
+      var value = $(this).attr('value')
+      var action = $(media).find('.inputs-media__reload')
+      // generate new url
+      var url = action.attr('href')
+      url = _updateQueryStringParameter(url, 'id', id)
+      url = _updateQueryStringParameter(url, 'value', value)
+      // update url and send request
+      $(action).attr('href', url)
+      $(action).trigger('click')
+    })
+  }
+
+  function initializeGalleryInput (gallery) {
+    var galleryInput = $(gallery).find('.inputs-gallery__input')
+    $(galleryInput).change(function () {
+      // get utils data
+      var id = $(this).attr('id')
+      var value = $(this).attr('value')
+      var action = $(gallery).find('.inputs-gallery__reload')
+      // generate new url
+      var url = action.attr('href')
+      url = _updateQueryStringParameter(url, 'id', id)
+      url = _updateQueryStringParameter(url, 'value', value)
+      // update url and send request
+      $(action).attr('href', url)
+      $(action).trigger('click')
+    })
+  }
 
   // This is the main function used to active the media selector.
   // The inputId is the input used by the selector to save the selected data.
@@ -14,7 +48,7 @@ var MediaSelector = (function () {
     // load index for media selector
     _reloadIndex()
     // open the modal
-    Modal.open('media__media_selector')
+    CoreModal.open('media__media_selector')
   }
 
   // This function closes the media selector and remove all event watcher on it.
@@ -24,7 +58,7 @@ var MediaSelector = (function () {
     $('#media__media_selector').unbind('loadIndexAction')
     $('#media__media_selector_cancel_button').unbind('click')
     // close the modal
-    Modal.close('media__media_selector')
+    CoreModal.close('media__media_selector')
   }
 
   // This function reload the index list for the medias.
@@ -120,9 +154,42 @@ var MediaSelector = (function () {
     })
   }
 
+  // This function updates uri params.
+  function _updateQueryStringParameter (uri, key, value) {
+    var re = new RegExp('([?&])' + key + '=.*?(&|$)', 'i')
+    var separator = uri.indexOf('?') !== -1 ? '&' : '?'
+    if (uri.match(re)) {
+      return uri.replace(re, '$1' + key + '=' + value + '$2')
+    }
+    else {
+      return uri + separator + key + '=' + value
+    }
+  }
+
+  function _initMediaInput () {
+    $('.inputs-media').each(function () {
+      initializeMediaInput(this)
+    })
+  }
+
+  function _initGalleryInput () {
+    $('.inputs-gallery').each(function () {
+      initializeGalleryInput(this)
+    })
+  }
+
+  // Init:
+  function init () {
+    _initMediaInput()
+    _initGalleryInput()
+  }
+
   return {
+    init: init,
     open: open,
-    close: close
+    close: close,
+    initializeMediaInput: initializeMediaInput,
+    initializeGalleryInput: initializeGalleryInput
   }
 
 })()

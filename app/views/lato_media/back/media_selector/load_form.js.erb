@@ -5,5 +5,6 @@ $('#media__media_selector .partials__media-selector-index-container').html('<%=j
 // trigger event of change
 $('#media__media_selector').trigger('loadIndexAction')
 
-// initialize inputs
-InputsInitializer.init()
+// initialize dropzone input
+var dropzone = $('#media__media_selector').find('.inputs-dropzone')
+CoreMediapicker.initializeDropzone(dropzone)
