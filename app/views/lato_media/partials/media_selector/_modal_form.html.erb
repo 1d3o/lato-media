@@ -1,6 +1,6 @@
 <div class="partials__media-selector-form">
 
-  <%=raw cell(:inputs, :dropzone).new(url: lato_media.medias_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
+  <%=raw cell(:inputs, :dropzone).new(url: lato_media.media_selector_add_media_path, max_size: CONFIGS[:lato_media][:max_media_accepted_size],
         label: LANGUAGES[:lato_media][:mixed][:load_media_files]) %>
 
 </div>

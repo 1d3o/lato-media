@@ -3,6 +3,8 @@ module LatoMedia
   # This class contains actions used by media cells.
   class Back::MediaSelectorController < Back::BackController
 
+    skip_before_action :verify_authenticity_token, only: [:add_media]    
+
     def load_index
       medias = LatoMedia::Media.all
       # set data for view
@@ -37,6 +39,20 @@ module LatoMedia
       # set values for render
       @medias = LatoMedia::Media.where(id: value)
       @id = params[:id]
+    end
+
+    def add_media
+      @media = LatoMedia::Media.new(attachment: params[:file])
+
+      unless @media.save
+        render json: { error: @media.errors.full_messages.to_sentence }, status: 400
+        return
+      end
+
+      render json: {}, status: 200
+    rescue => e
+      puts e
+      render json: { error: 'There was an internal error' }, status: 500
     end
 
   end
