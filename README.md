@@ -4,27 +4,27 @@ Lato is a Rails engine used to develop modular admin panels. This is the module 
 
 ## Installation
 
-- Install [lato-core](https://github.com/ideonetwork/lato-core) gem.
+Install [lato-core](https://github.com/ideonetwork/lato-core) gem.
 
-- Add the lato_media gem on your Gemfile:
+Add the lato_media gem on your Gemfile:
 
 ```ruby
 gem 'lato_media'
 ```
 
-- Install the gem:
+Install the gem:
 
 ```console
 bundle install
 ```
 
-- Copy the migrations:
+Copy the migrations:
 
 ```console
 rails lato_media:install:migrations
 ```
 
-- Exec migrations:
+Exec migrations:
 
 ```console
 bundle exec rake db:migrate
