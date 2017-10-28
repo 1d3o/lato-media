@@ -8,6 +8,24 @@
 <!-- MAIN CONTAINER -->
 <%=raw row.open %>
 
+  <!-- BIG SECTION CONTAINER -->
+  <%=raw container_block_big.open %>
+
+    <%=raw row.open %>
+
+      <%=raw block.open %>
+
+        <%=raw cell(:elements, :title).new(label: @media.title, size: 4) %>
+
+        <%= render 'lato_media/back/medias/shared/form', url: lato_media.media_path(@media.id), method: :put %>
+
+      <%=raw block.close %>
+
+    <%=raw row.close %>
+
+  <%=raw container_block_big.close %>
+  <!-- / BIG SECTION CONTAINER -->
+
   <!-- SMALL SECTION CONTAINER -->
   <%=raw container_block_small.open %>
 
@@ -30,22 +48,6 @@
 
   <%=raw container_block_small.close %>
   <!-- / SMALL SECTION CONTAINER -->
-
-  <!-- BIG SECTION CONTAINER -->
-  <%=raw container_block_big.open %>
-
-    <%=raw row.open %>
-
-      <%=raw block.open %>
-
-        <%= render 'lato_media/back/medias/shared/form', url: lato_media.media_path(@media.id), method: :put %>
-
-      <%=raw block.close %>
-
-    <%=raw row.close %>
-
-  <%=raw container_block_big.close %>
-  <!-- / BIG SECTION CONTAINER -->
 
 <%=raw row.close %>
 <!-- / MAIN CONTAINER -->
