@@ -29,3 +29,7 @@ Exec migrations:
 ```console
 bundle exec rake db:migrate
 ```
+
+## TODO
+
+Update paperclip version to avoid security vulnerabilities when a new paperclip version is online (>5.1.0)
