@@ -1,5 +1,7 @@
 # Lato Media
 
+[![Gem Version](https://badge.fury.io/rb/lato_media.svg)](https://badge.fury.io/rb/lato_media)
+
 Lato is a Rails engine used to develop modular admin panels. This is the module used to manage attachments and media files.
 
 ## Installation
