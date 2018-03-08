@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
   # attachments management
   # doc: https://github.com/thoughtbot/paperclip
-  s.add_runtime_dependency 'paperclip', '>= 5.1.0'
+  s.add_runtime_dependency 'paperclip', '>= 5.2.1'
 
   # attachments optimizer
   # doc: https://github.com/janfoeh/paperclip-optimizer
